@@ -1,4 +1,4 @@
-# Enhancement of Rabin-Karp Algorithm Using XOR Filter
+#  Enhancement of Rabin-Karp Algorithm Using XOR Filter
 
 ## Abstract
 This repository presents an enhancement to the classic Rabin-Karp string-matching algorithm by integrating the XOR Filter, a probabilistic data structure known for its speed and low memory consumption (Martinez and Larrabeiti, 2024). The proposed method aims to optimize the runtime performance of the Rabin-Karp algorithm, particularly in large-scale data scenarios, by reducing unnecessary computations and memory calls. Comparative analysis demonstrates that the enhanced algorithm achieves significant improvements in execution time over both the naïve Rabin-Karp and its variants utilizing Bloom filters.
@@ -10,14 +10,14 @@ The Rabin-Karp algorithm, introduced by Michael O. Rabin and Richard M. Karp in 
 ## Methodology
 The enhancement involves constructing an XOR Filter during the preprocessing phase using the given patterns. Patterns absent from the input data are filtered out, reducing the number of comparisons required. The Rabin-Karp algorithm is then applied to the remaining patterns, utilizing both hash and XOR checks to efficiently identify matches. This dual-filtering approach minimizes computational overhead and accelerates the string-matching process.
 
-### Algorithm Steps
+#### Algorithm Steps
 1. Construct the XOR Filter with the provided patterns.
 2. Remove patterns not present in the input data using the filter.
 3. Apply the Rabin-Karp algorithm with XOR verification to the filtered patterns.
 4. Return the starting indices of all exact matches found in the input text.
 
-
-## Table
+------------
+#### Table
 
 **Table 1. List of Execution Time for the Naïve RKA, Target Algorithm, and the Enhanced Algorithm**
 
@@ -78,7 +78,7 @@ print(result)  # Output: [10]
 
 
 ## References
-- Enhancement of Rabin-Karp Algorithm using XOR Filter, International Journal of Computing Sciences Research, 2024. (This paper)
+- Escoto, B., Ladines, A., Macahilig, A., Mercado, M., Cortez, D., Dioses, R., Morano, J., & Guialil, J. (2024). Enhancement of Rabin-Karp Algorithm using XOR Filter. International Journal Of Computing Sciences Research, 8, 3088-3102.
 - Martinez, J., & Larrabeiti, D. (2024). [Reference on XOR Filter performance]
 - Graf, D., & Lemire, D. (2020). [Evaluation of Bloom, Cuckoo, and XOR Filters]
 - Luo, et al. (2020). [Bloom Filter Applications]
@@ -88,4 +88,4 @@ print(result)  # Output: [10]
 - Singh, et al. (2020). [Probabilistic Data Structures]
 
 ---
-This repository and its documentation are intended for academic and research purposes, providing a foundation for further exploration and optimization of pattern-matching algorithms using advanced probabilistic data structures.
+> *This repository and its documentation are intended for academic and research purposes, providing a foundation for further exploration and optimization of pattern-matching algorithms using advanced probabilistic data structures.*
